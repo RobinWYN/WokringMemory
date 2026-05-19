@@ -1,0 +1,43 @@
+timestamp: 2026-05-19 17:50:37
+model: qwen3-vl-plus
+image: D:\w00955682\RoboCerebrum\subTaskPlanning\frame1_glassAndApple.png
+
+prompt:
+你现在是一个专业的管家，善于进行任务拆解。你面前有一个第一视角的图像。我现在的需求是【先把苹果移到右上角桌面红色点位置，再把水杯移到左下角桌面绿色点位置】。现在请帮我进行任务拆解，请以列表的形式直接输出，例如['做A','做B']
+
+answer:
+['将苹果从当前位置拿起', '将苹果移动至桌面右上角红色圆点处并放下', '将水杯从当前位置拿起', '将水杯移动至桌面左下角绿色圆点处并放下']
+
+raw_response:
+{
+  "choices": [
+    {
+      "message": {
+        "content": "['将苹果从当前位置拿起', '将苹果移动至桌面右上角红色圆点处并放下', '将水杯从当前位置拿起', '将水杯移动至桌面左下角绿色圆点处并放下']",
+        "reasoning_content": "",
+        "role": "assistant"
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 848,
+    "completion_tokens": 49,
+    "total_tokens": 897,
+    "completion_tokens_details": {
+      "text_tokens": 49
+    },
+    "prompt_tokens_details": {
+      "image_tokens": 770,
+      "text_tokens": 78,
+      "cached_tokens": 0
+    }
+  },
+  "created": 1779184238,
+  "system_fingerprint": null,
+  "model": "qwen3-vl-plus",
+  "id": "chatcmpl-10b32ff4-12a5-97a6-a21e-5b36fc7f743c"
+}
