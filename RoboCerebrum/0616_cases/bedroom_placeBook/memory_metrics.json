@@ -1,0 +1,520 @@
+{
+  "namespace": [
+    "conversation",
+    "w10_0616",
+    "bedroom_placeBook"
+  ],
+  "memory_call_count": 41,
+  "memory_read_count": 26,
+  "memory_hit_count": 26,
+  "memory_miss_count": 0,
+  "memory_call_accuracy": 1.0,
+  "total_memory_latency_sec": 0.003848,
+  "avg_memory_latency_sec": 9.4e-05,
+  "crud_counts": {
+    "create": 1,
+    "read": 26,
+    "update": 14,
+    "delete": 0
+  },
+  "data_consistency": {
+    "ok": true,
+    "missing_status": [],
+    "subtask_count": 4,
+    "status_count": 4
+  },
+  "operations": [
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "create",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "case_session",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:51",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": false,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:51",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.001548
+    },
+    {
+      "time": "2026-06-16 19:27:51",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:51",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:52",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:56",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:56",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:56",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:00",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:00",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:00",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:08",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:08",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:08",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:12",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:12",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:12",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:12",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:12",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:16",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.001464
+    },
+    {
+      "time": "2026-06-16 19:28:16",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:16",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:21",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:21",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:21",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:25",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:25",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:26",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.000281
+    },
+    {
+      "time": "2026-06-16 19:28:32",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:32",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:32",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:36",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:36",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:36",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:40",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:40",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:40",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:28:40",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_placeBook"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.000555
+    }
+  ]
+}

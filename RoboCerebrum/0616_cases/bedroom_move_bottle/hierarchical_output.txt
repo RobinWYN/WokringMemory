@@ -1,0 +1,673 @@
+{
+  "case_name": "bedroom_move_bottle",
+  "mode": "hierarchical_world",
+  "state": {
+    "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+    "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+    "subtask_list": [
+      "导航至床边(导航)",
+      "整理床铺（拉平被子、归置枕头）(动作)",
+      "导航至椅子旁(导航)",
+      "将折叠椅移至墙边靠放(动作)",
+      "导航至小桌旁(导航)",
+      "收走桌上餐盘与餐具至厨房(导航+动作)",
+      "导航至窗边衣物架(导航)",
+      "挂起散落衣物(动作)"
+    ],
+    "subtask_status": {
+      "导航至床边(导航)": "未完成",
+      "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+      "导航至椅子旁(导航)": "未完成",
+      "将折叠椅移至墙边靠放(动作)": "未完成",
+      "导航至小桌旁(导航)": "未完成",
+      "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+      "导航至窗边衣物架(导航)": "未完成",
+      "挂起散落衣物(动作)": "未完成"
+    },
+    "action_results": [
+      "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+      "<right><place>  (水瓶)  [245, 428, 595, 784]"
+    ],
+    "nav_results": [
+      "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+    ],
+    "checker_results": [
+      "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+      "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+      "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+      "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+      "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+    ],
+    "last_task": null,
+    "current_task": "导航至床边(导航)",
+    "last_action": null,
+    "gripper_right": 60.0,
+    "gripper_left": 100.0,
+    "time": null,
+    "orchestra_thinking": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+    "orchestra_lists": [
+      {
+        "index": 1,
+        "name": "移动至主卧",
+        "type": "导航",
+        "agent_type": "navi",
+        "status": "已完成"
+      },
+      {
+        "index": 2,
+        "name": "整理主卧",
+        "type": "动作",
+        "agent_type": "action_decision",
+        "status": "未完成"
+      }
+    ],
+    "current_intention": {
+      "index": 2,
+      "name": "整理主卧",
+      "type": "动作",
+      "agent_type": "action_decision",
+      "status": "未完成"
+    },
+    "last_intention": {
+      "index": 1,
+      "name": "移动至主卧",
+      "type": "导航",
+      "agent_type": "navi",
+      "status": "已完成"
+    },
+    "conversation_memory": {
+      "memory_namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "conversation_memories": {
+        "case_session": {
+          "case_name": "bedroom_move_bottle",
+          "version_name": "w10_0616",
+          "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+          "created_at": "2026-06-16 19:26:44",
+          "updated_at": "2026-06-16 19:26:44"
+        },
+        "runtime_state": {
+          "node_name": "navi",
+          "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+          "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+          "current_intention": {
+            "index": 2,
+            "name": "整理主卧",
+            "type": "动作",
+            "agent_type": "action_decision",
+            "status": "未完成"
+          },
+          "last_intention": {
+            "index": 1,
+            "name": "移动至主卧",
+            "type": "导航",
+            "agent_type": "navi",
+            "status": "已完成"
+          },
+          "subtask_list": [
+            "导航至床边(导航)",
+            "整理床铺（拉平被子、归置枕头）(动作)",
+            "导航至椅子旁(导航)",
+            "将折叠椅移至墙边靠放(动作)",
+            "导航至小桌旁(导航)",
+            "收走桌上餐盘与餐具至厨房(导航+动作)",
+            "导航至窗边衣物架(导航)",
+            "挂起散落衣物(动作)"
+          ],
+          "subtask_status": {
+            "导航至床边(导航)": "未完成",
+            "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+            "导航至椅子旁(导航)": "未完成",
+            "将折叠椅移至墙边靠放(动作)": "未完成",
+            "导航至小桌旁(导航)": "未完成",
+            "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+            "导航至窗边衣物架(导航)": "未完成",
+            "挂起散落衣物(动作)": "未完成"
+          },
+          "last_task": null,
+          "current_task": "导航至床边(导航)",
+          "action_results": [
+            "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+            "<right><place>  (水瓶)  [245, 428, 595, 784]"
+          ],
+          "nav_results": [
+            "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+          ],
+          "checker_results": [
+            "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+            "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+            "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+            "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+            "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+          ],
+          "last_output_preview": "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]",
+          "created_at": "2026-06-16 19:26:52",
+          "updated_at": "2026-06-16 19:27:45"
+        }
+      },
+      "memory_count": 2
+    },
+    "last_agent_timing": {
+      "orchestra": {
+        "end_to_end_sec": 7.178,
+        "api_elapsed_sec": 7.164,
+        "model_inference_sec": null,
+        "model": "qwen3-vl-plus"
+      },
+      "decompose": {
+        "end_to_end_sec": 5.646,
+        "api_elapsed_sec": 5.618,
+        "model_inference_sec": null,
+        "model": "qwen3-vl-plus"
+      },
+      "action_state_checker": {
+        "end_to_end_sec": 4.507,
+        "api_elapsed_sec": 4.48,
+        "model_inference_sec": null,
+        "model": "qwen3-vl-plus"
+      },
+      "action_decision": {
+        "end_to_end_sec": 4.52,
+        "api_elapsed_sec": 4.503,
+        "model_inference_sec": null,
+        "model": "qwen3-vl-plus"
+      },
+      "navi": {
+        "end_to_end_sec": 5.197,
+        "api_elapsed_sec": 5.167,
+        "model_inference_sec": null,
+        "model": "qwen3-vl-plus"
+      }
+    },
+    "task_memory": {
+      "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "subtask_list": [
+        "导航至床边(导航)",
+        "整理床铺（拉平被子、归置枕头）(动作)",
+        "导航至椅子旁(导航)",
+        "将折叠椅移至墙边靠放(动作)",
+        "导航至小桌旁(导航)",
+        "收走桌上餐盘与餐具至厨房(导航+动作)",
+        "导航至窗边衣物架(导航)",
+        "挂起散落衣物(动作)"
+      ],
+      "subtask_status": {
+        "导航至床边(导航)": "未完成",
+        "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+        "导航至椅子旁(导航)": "未完成",
+        "将折叠椅移至墙边靠放(动作)": "未完成",
+        "导航至小桌旁(导航)": "未完成",
+        "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+        "导航至窗边衣物架(导航)": "未完成",
+        "挂起散落衣物(动作)": "未完成"
+      },
+      "action_results": [
+        "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+        "<right><place>  (水瓶)  [245, 428, 595, 784]"
+      ],
+      "nav_results": [
+        "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+      ],
+      "checker_results": [
+        "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+        "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+        "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+        "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+        "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+      ],
+      "last_task": null,
+      "current_task": "导航至床边(导航)",
+      "last_action": null,
+      "gripper_right": 60.0,
+      "gripper_left": 100.0,
+      "time": null,
+      "orchestra_thinking": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "orchestra_lists": [
+        {
+          "index": 1,
+          "name": "移动至主卧",
+          "type": "导航",
+          "agent_type": "navi",
+          "status": "已完成"
+        },
+        {
+          "index": 2,
+          "name": "整理主卧",
+          "type": "动作",
+          "agent_type": "action_decision",
+          "status": "未完成"
+        }
+      ],
+      "current_intention": {
+        "index": 2,
+        "name": "整理主卧",
+        "type": "动作",
+        "agent_type": "action_decision",
+        "status": "未完成"
+      },
+      "last_intention": {
+        "index": 1,
+        "name": "移动至主卧",
+        "type": "导航",
+        "agent_type": "navi",
+        "status": "已完成"
+      },
+      "conversation_memory": {
+        "memory_namespace": [
+          "conversation",
+          "w10_0616",
+          "bedroom_move_bottle"
+        ],
+        "conversation_memories": {
+          "case_session": {
+            "case_name": "bedroom_move_bottle",
+            "version_name": "w10_0616",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "created_at": "2026-06-16 19:26:44",
+            "updated_at": "2026-06-16 19:26:44"
+          },
+          "runtime_state": {
+            "node_name": "navi",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "current_intention": {
+              "index": 2,
+              "name": "整理主卧",
+              "type": "动作",
+              "agent_type": "action_decision",
+              "status": "未完成"
+            },
+            "last_intention": {
+              "index": 1,
+              "name": "移动至主卧",
+              "type": "导航",
+              "agent_type": "navi",
+              "status": "已完成"
+            },
+            "subtask_list": [
+              "导航至床边(导航)",
+              "整理床铺（拉平被子、归置枕头）(动作)",
+              "导航至椅子旁(导航)",
+              "将折叠椅移至墙边靠放(动作)",
+              "导航至小桌旁(导航)",
+              "收走桌上餐盘与餐具至厨房(导航+动作)",
+              "导航至窗边衣物架(导航)",
+              "挂起散落衣物(动作)"
+            ],
+            "subtask_status": {
+              "导航至床边(导航)": "未完成",
+              "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+              "导航至椅子旁(导航)": "未完成",
+              "将折叠椅移至墙边靠放(动作)": "未完成",
+              "导航至小桌旁(导航)": "未完成",
+              "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+              "导航至窗边衣物架(导航)": "未完成",
+              "挂起散落衣物(动作)": "未完成"
+            },
+            "last_task": null,
+            "current_task": "导航至床边(导航)",
+            "action_results": [
+              "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+              "<right><place>  (水瓶)  [245, 428, 595, 784]"
+            ],
+            "nav_results": [
+              "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+            ],
+            "checker_results": [
+              "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+              "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+              "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+              "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+              "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+            ],
+            "last_output_preview": "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]",
+            "created_at": "2026-06-16 19:26:52",
+            "updated_at": "2026-06-16 19:27:45"
+          }
+        },
+        "memory_count": 2
+      },
+      "last_agent_timing": {
+        "orchestra": {
+          "end_to_end_sec": 7.178,
+          "api_elapsed_sec": 7.164,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "decompose": {
+          "end_to_end_sec": 5.646,
+          "api_elapsed_sec": 5.618,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "action_state_checker": {
+          "end_to_end_sec": 4.507,
+          "api_elapsed_sec": 4.48,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "action_decision": {
+          "end_to_end_sec": 4.52,
+          "api_elapsed_sec": 4.503,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "navi": {
+          "end_to_end_sec": 5.197,
+          "api_elapsed_sec": 5.167,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        }
+      }
+    },
+    "tast_memory": {
+      "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "subtask_list": [
+        "导航至床边(导航)",
+        "整理床铺（拉平被子、归置枕头）(动作)",
+        "导航至椅子旁(导航)",
+        "将折叠椅移至墙边靠放(动作)",
+        "导航至小桌旁(导航)",
+        "收走桌上餐盘与餐具至厨房(导航+动作)",
+        "导航至窗边衣物架(导航)",
+        "挂起散落衣物(动作)"
+      ],
+      "subtask_status": {
+        "导航至床边(导航)": "未完成",
+        "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+        "导航至椅子旁(导航)": "未完成",
+        "将折叠椅移至墙边靠放(动作)": "未完成",
+        "导航至小桌旁(导航)": "未完成",
+        "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+        "导航至窗边衣物架(导航)": "未完成",
+        "挂起散落衣物(动作)": "未完成"
+      },
+      "action_results": [
+        "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+        "<right><place>  (水瓶)  [245, 428, 595, 784]"
+      ],
+      "nav_results": [
+        "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+      ],
+      "checker_results": [
+        "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+        "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+        "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+        "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+        "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+      ],
+      "last_task": null,
+      "current_task": "导航至床边(导航)",
+      "last_action": null,
+      "gripper_right": 60.0,
+      "gripper_left": 100.0,
+      "time": null,
+      "orchestra_thinking": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "orchestra_lists": [
+        {
+          "index": 1,
+          "name": "移动至主卧",
+          "type": "导航",
+          "agent_type": "navi",
+          "status": "已完成"
+        },
+        {
+          "index": 2,
+          "name": "整理主卧",
+          "type": "动作",
+          "agent_type": "action_decision",
+          "status": "未完成"
+        }
+      ],
+      "current_intention": {
+        "index": 2,
+        "name": "整理主卧",
+        "type": "动作",
+        "agent_type": "action_decision",
+        "status": "未完成"
+      },
+      "last_intention": {
+        "index": 1,
+        "name": "移动至主卧",
+        "type": "导航",
+        "agent_type": "navi",
+        "status": "已完成"
+      },
+      "conversation_memory": {
+        "memory_namespace": [
+          "conversation",
+          "w10_0616",
+          "bedroom_move_bottle"
+        ],
+        "conversation_memories": {
+          "case_session": {
+            "case_name": "bedroom_move_bottle",
+            "version_name": "w10_0616",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "created_at": "2026-06-16 19:26:44",
+            "updated_at": "2026-06-16 19:26:44"
+          },
+          "runtime_state": {
+            "node_name": "navi",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "current_intention": {
+              "index": 2,
+              "name": "整理主卧",
+              "type": "动作",
+              "agent_type": "action_decision",
+              "status": "未完成"
+            },
+            "last_intention": {
+              "index": 1,
+              "name": "移动至主卧",
+              "type": "导航",
+              "agent_type": "navi",
+              "status": "已完成"
+            },
+            "subtask_list": [
+              "导航至床边(导航)",
+              "整理床铺（拉平被子、归置枕头）(动作)",
+              "导航至椅子旁(导航)",
+              "将折叠椅移至墙边靠放(动作)",
+              "导航至小桌旁(导航)",
+              "收走桌上餐盘与餐具至厨房(导航+动作)",
+              "导航至窗边衣物架(导航)",
+              "挂起散落衣物(动作)"
+            ],
+            "subtask_status": {
+              "导航至床边(导航)": "未完成",
+              "整理床铺（拉平被子、归置枕头）(动作)": "未完成",
+              "导航至椅子旁(导航)": "未完成",
+              "将折叠椅移至墙边靠放(动作)": "未完成",
+              "导航至小桌旁(导航)": "未完成",
+              "收走桌上餐盘与餐具至厨房(导航+动作)": "未完成",
+              "导航至窗边衣物架(导航)": "未完成",
+              "挂起散落衣物(动作)": "未完成"
+            },
+            "last_task": null,
+            "current_task": "导航至床边(导航)",
+            "action_results": [
+              "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+              "<right><place>  (水瓶)  [245, 428, 595, 784]"
+            ],
+            "nav_results": [
+              "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]"
+            ],
+            "checker_results": [
+              "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+              "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+              "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+              "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+              "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]"
+            ],
+            "last_output_preview": "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]",
+            "created_at": "2026-06-16 19:26:52",
+            "updated_at": "2026-06-16 19:27:45"
+          }
+        },
+        "memory_count": 2
+      },
+      "last_agent_timing": {
+        "orchestra": {
+          "end_to_end_sec": 7.178,
+          "api_elapsed_sec": 7.164,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "decompose": {
+          "end_to_end_sec": 5.646,
+          "api_elapsed_sec": 5.618,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "action_state_checker": {
+          "end_to_end_sec": 4.507,
+          "api_elapsed_sec": 4.48,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "action_decision": {
+          "end_to_end_sec": 4.52,
+          "api_elapsed_sec": 4.503,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "navi": {
+          "end_to_end_sec": 5.197,
+          "api_elapsed_sec": 5.167,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "orchestra",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\global.jpg",
+      "input_state": "{\"longHorizon_command\": \"整理主卧，先把桌子上的瓶子放到盘子里\"}",
+      "output": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "duration_sec": 7.178,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "decompose",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\local.png",
+      "input_state": "{\"current_intention\": \"整理客厅，先把水瓶放到盘子里\"}",
+      "output": "['导航至蓝色桌布小桌边(导航)', '拿起水瓶放入盘子中(动作)']",
+      "duration_sec": 4.782,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\0_initial.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": null, \"current_task\": \"导航至蓝色桌布小桌边(导航)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前视角已正对蓝色桌布小桌，机器人底座紧邻桌面边缘，距离小于0.5米。  \n最终状态：[done]",
+      "duration_sec": 4.538,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\0_initial.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": \"导航至蓝色桌布小桌边(导航)\", \"current_task\": \"拿起水瓶放入盘子中(动作)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "分析：水瓶仍在桌面上，未被夹爪抓取，更未放入盘中。  \n最终状态：[doing]",
+      "duration_sec": 4.362,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_decision",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\0_initial.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": \"导航至蓝色桌布小桌边(导航)\", \"current_task\": \"拿起水瓶放入盘子中(动作)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "<left><grasp>  (水瓶)  [550, 470, 610, 580]",
+      "duration_sec": 4.237,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\0_initial_bbox.png",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\1_grasp.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": \"导航至蓝色桌布小桌边(导航)\", \"current_task\": \"拿起水瓶放入盘子中(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 60.0, \"gripper_left\": 100.0}",
+      "output": "分析：水瓶被夹爪抓持悬空，尚未放入盘中，未稳定放置。  \n最终状态：[doing]",
+      "duration_sec": 4.333,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_decision",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\1_grasp.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": \"导航至蓝色桌布小桌边(导航)\", \"current_task\": \"拿起水瓶放入盘子中(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 60.0, \"gripper_left\": 100.0}",
+      "output": "<right><place>  (水瓶)  [245, 428, 595, 784]",
+      "duration_sec": 4.52,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\1_grasp_bbox.png",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\2_move.png",
+      "input_state": "{\"subtask_list\": [\"导航至蓝色桌布小桌边(导航)\", \"拿起水瓶放入盘子中(动作)\"], \"last_task\": \"导航至蓝色桌布小桌边(导航)\", \"current_task\": \"拿起水瓶放入盘子中(动作)\", \"last_action\": \"place\", \"gripper_right\": 60.0, \"gripper_left\": 100.0}",
+      "output": "分析：水瓶已放入白色盘中，稳定放置于盘内网格上，夹爪已释放。  \n最终状态：[done]",
+      "duration_sec": 9.019,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "decompose",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\local.png",
+      "input_state": "{\"current_intention\": {\"index\": 2, \"name\": \"整理主卧\", \"type\": \"动作\", \"agent_type\": \"action_decision\", \"status\": \"未完成\"}}",
+      "output": "['导航至床边(导航)', '整理床铺（拉平被子、归置枕头）(动作)', '导航至椅子旁(导航)', '将折叠椅移至墙边靠放(动作)', '导航至小桌旁(导航)', '收走桌上餐盘与餐具至厨房(导航+动作)', '导航至窗边衣物架(导航)', '挂起散落衣物(动作)']",
+      "duration_sec": 5.646,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\2_move.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"整理床铺（拉平被子、归置枕头）(动作)\", \"导航至椅子旁(导航)\", \"将折叠椅移至墙边靠放(动作)\", \"导航至小桌旁(导航)\", \"收走桌上餐盘与餐具至厨房(导航+动作)\", \"导航至窗边衣物架(导航)\", \"挂起散落衣物(动作)\"], \"last_task\": null, \"current_task\": \"导航至床边(导航)\", \"last_action\": null, \"gripper_right\": 60.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前任务为“导航至床边”，但图像中显示机器人正位于小桌旁（有餐盘、餐具），未见床，且底座未紧靠床。  \n最终状态：[doing]",
+      "duration_sec": 4.507,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_move_bottle",
+      "agent_type": "navi",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\2_move.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"整理床铺（拉平被子、归置枕头）(动作)\", \"导航至椅子旁(导航)\", \"将折叠椅移至墙边靠放(动作)\", \"导航至小桌旁(导航)\", \"收走桌上餐盘与餐具至厨房(导航+动作)\", \"导航至窗边衣物架(导航)\", \"挂起散落衣物(动作)\"], \"last_task\": null, \"current_task\": \"导航至床边(导航)\", \"last_action\": null, \"gripper_right\": 60.0, \"gripper_left\": 100.0}",
+      "output": "<navi>  (self)  [[120,680], [320,680], [330,880], [110,880]] [[400,430], [580,430], [590,720], [390,720]]",
+      "duration_sec": 5.197,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\2_move_bbox_navi.png",
+      "status": "success",
+      "error": ""
+    }
+  ]
+}

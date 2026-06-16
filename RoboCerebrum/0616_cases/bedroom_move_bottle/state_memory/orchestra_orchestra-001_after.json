@@ -1,0 +1,163 @@
+{
+  "node_name": "orchestra",
+  "node_id": "orchestra-001",
+  "stage": "after",
+  "next_node": "select_intention",
+  "error": "",
+  "time": "2026-06-16 19:26:52",
+  "graph_state": {
+    "version_dir": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616",
+    "case_dir": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle",
+    "case_name": "bedroom_move_bottle",
+    "runtime_state": {
+      "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+      "subtask_list": [],
+      "subtask_status": {},
+      "action_results": [],
+      "nav_results": [],
+      "last_task": null,
+      "current_task": null,
+      "last_action": null,
+      "gripper_right": null,
+      "gripper_left": null,
+      "time": null,
+      "orchestra_thinking": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "orchestra_lists": [
+        {
+          "index": 1,
+          "name": "移动至主卧",
+          "type": "本体移动",
+          "agent_type": "navi",
+          "status": "未完成"
+        },
+        {
+          "index": 2,
+          "name": "整理主卧",
+          "type": "局部任务",
+          "agent_type": "action_decision",
+          "status": "未完成"
+        }
+      ],
+      "current_intention": {
+        "index": 1,
+        "name": "移动至主卧",
+        "type": "本体移动",
+        "agent_type": "navi",
+        "status": "未完成"
+      },
+      "last_intention": null,
+      "checker_results": [],
+      "conversation_memory": {
+        "memory_namespace": [
+          "conversation",
+          "w10_0616",
+          "bedroom_move_bottle"
+        ],
+        "conversation_memories": {
+          "case_session": {
+            "case_name": "bedroom_move_bottle",
+            "version_name": "w10_0616",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "created_at": "2026-06-16 19:26:44",
+            "updated_at": "2026-06-16 19:26:44"
+          },
+          "runtime_state": {
+            "node_name": "orchestra",
+            "user_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "longHorizon_command": "整理主卧，先把桌子上的瓶子放到盘子里",
+            "current_intention": {
+              "index": 1,
+              "name": "移动至主卧",
+              "type": "本体移动",
+              "agent_type": "navi",
+              "status": "未完成"
+            },
+            "last_intention": null,
+            "subtask_list": [],
+            "subtask_status": {},
+            "last_task": null,
+            "current_task": null,
+            "action_results": [],
+            "nav_results": [],
+            "checker_results": [],
+            "last_output_preview": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+            "created_at": "2026-06-16 19:26:52",
+            "updated_at": "2026-06-16 19:26:52"
+          }
+        },
+        "memory_count": 2
+      },
+      "last_agent_timing": {
+        "orchestra": {
+          "end_to_end_sec": 7.178,
+          "api_elapsed_sec": 7.164,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        }
+      }
+    },
+    "records": [
+      {
+        "case_name": "bedroom_move_bottle",
+        "agent_type": "orchestra",
+        "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\global.jpg",
+        "input_state": "{\"longHorizon_command\": \"整理主卧，先把桌子上的瓶子放到盘子里\"}",
+        "output": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+        "duration_sec": 7.178,
+        "bbox_path": "",
+        "status": "success",
+        "error": ""
+      }
+    ],
+    "timestep_images": [
+      [
+        0,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\0_initial.png"
+      ],
+      [
+        1,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\1_grasp.png"
+      ],
+      [
+        2,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\2_move.png"
+      ]
+    ],
+    "action_index": 0,
+    "last_decompose_state": null,
+    "last_checker_state": null,
+    "last_error": "",
+    "active_node": "orchestra",
+    "graph_events": [
+      {
+        "time": "2026-06-16 19:26:44",
+        "node": "orchestra",
+        "status": "running",
+        "detail": {
+          "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_move_bottle\\global.jpg",
+          "input_state": "{\"longHorizon_command\": \"整理主卧，先把桌子上的瓶子放到盘子里\"}"
+        }
+      },
+      {
+        "time": "2026-06-16 19:26:52",
+        "node": "orchestra",
+        "status": "success",
+        "detail": {
+          "duration_sec": 7.178,
+          "output_preview": "用户需求分析：当前视角为客厅（含餐桌、沙发、厨房区域），用户要求“整理主卧，先把桌子上的瓶子放到盘子里”。主卧不在当前视野内，需先移动至主卧；任务核心是将主卧桌上的瓶子放入盘子，属于局部整理动作，应归为“整理主卧”而非更细粒度动作，因指令明确指向房间级整理目标。\n\n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']"
+        }
+      }
+    ],
+    "memory_namespace": [
+      "conversation",
+      "w10_0616",
+      "bedroom_move_bottle"
+    ],
+    "ros_input_mode": false,
+    "ros_image_topic": "/camera/camera/color/image_raw/compressed",
+    "ros_command_topic": "/longHorizon_command",
+    "ros_input_timeout_sec": 5.0,
+    "loop23_mode": false
+  }
+}

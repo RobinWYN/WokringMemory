@@ -1,0 +1,25 @@
+{
+  "checkpoint_enabled": true,
+  "current_next": [],
+  "history_count": 16,
+  "latest_values_keys": [
+    "action_index",
+    "active_node",
+    "case_dir",
+    "case_name",
+    "graph_events",
+    "last_checker_state",
+    "last_decompose_state",
+    "last_error",
+    "loop23_mode",
+    "memory_namespace",
+    "records",
+    "ros_command_topic",
+    "ros_image_topic",
+    "ros_input_mode",
+    "ros_input_timeout_sec",
+    "runtime_state",
+    "timestep_images",
+    "version_dir"
+  ]
+}

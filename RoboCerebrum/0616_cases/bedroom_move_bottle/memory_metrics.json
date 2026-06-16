@@ -1,0 +1,544 @@
+{
+  "namespace": [
+    "conversation",
+    "w10_0616",
+    "bedroom_move_bottle"
+  ],
+  "memory_call_count": 43,
+  "memory_read_count": 27,
+  "memory_hit_count": 27,
+  "memory_miss_count": 0,
+  "memory_call_accuracy": 1.0,
+  "total_memory_latency_sec": 0.002157,
+  "avg_memory_latency_sec": 5e-05,
+  "crud_counts": {
+    "create": 1,
+    "read": 27,
+    "update": 15,
+    "delete": 0
+  },
+  "data_consistency": {
+    "ok": true,
+    "missing_status": [],
+    "subtask_count": 8,
+    "status_count": 8
+  },
+  "operations": [
+    {
+      "time": "2026-06-16 19:26:44",
+      "operation": "create",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "case_session",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:44",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:44",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:52",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": false,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:52",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:52",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:52",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:52",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:57",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:57",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:26:57",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:01",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:01",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:01",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:01",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:01",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:06",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:06",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:06",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:10",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:10",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:10",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:15",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:15",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:15",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:20",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.000556
+    },
+    {
+      "time": "2026-06-16 19:27:20",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:20",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:29",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.000566
+    },
+    {
+      "time": "2026-06-16 19:27:29",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 5.6e-05
+    },
+    {
+      "time": "2026-06-16 19:27:29",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:29",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:29",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:34",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:34",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:34",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:39",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:39",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:39",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.000979
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "update",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "runtime_state",
+      "hit": true,
+      "latency_sec": 0.0
+    },
+    {
+      "time": "2026-06-16 19:27:45",
+      "operation": "read",
+      "namespace": [
+        "conversation",
+        "w10_0616",
+        "bedroom_move_bottle"
+      ],
+      "key": "*",
+      "hit": true,
+      "latency_sec": 0.0
+    }
+  ]
+}

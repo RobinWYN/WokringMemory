@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>RoboCerebrum LangGraph 节点可视化</title>
+<style>
+body{font-family:Arial,"Microsoft YaHei",sans-serif;margin:0;background:#0f172a;color:#e5e7eb}
+header{padding:16px 24px;background:#111827;border-bottom:1px solid #334155}
+main{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:16px}
+.card{background:#111827;border:1px solid #334155;border-radius:12px;padding:16px}
+.node{padding:10px 12px;margin:8px 0;border-radius:10px;border:1px solid #475569;background:#1e293b}
+.node.running{border-color:#facc15;box-shadow:0 0 16px #facc1544}
+.node.success{border-color:#22c55e}.node.failed{border-color:#ef4444}.node.pending{opacity:.7}
+.event{font-family:Consolas,monospace;font-size:13px;border-bottom:1px solid #334155;padding:8px 0;white-space:pre-wrap}
+small{color:#94a3b8}.status{float:right}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+pre{white-space:pre-wrap;word-break:break-word;max-height:360px;overflow:auto}
+</style>
+</head>
+<body>
+<header><h2>RoboCerebrum LangGraph 节点激活状态</h2><small id="caseName"></small></header>
+<main>
+<section class="card"><h3>节点</h3><div id="nodes"></div></section>
+<section class="grid">
+<div class="card"><h3>最近事件</h3><div id="events"></div></div>
+<div class="card"><h3>运行状态</h3><pre id="state"></pre></div>
+</section>
+</main>
+<script>
+const nodeNames=['orchestra','select_intention','decompose','checker','complete_task','navi','action_decision','finalize'];
+async function refresh(){
+  try{
+    const res=await fetch('graph_state.json?ts='+Date.now());
+    const data=await res.json();
+    document.getElementById('caseName').textContent=data.case_name||'';
+    const latest={};
+    for(const e of data.events||[]) latest[e.node]=e.status;
+    const active=data.active_node;
+    document.getElementById('nodes').innerHTML=nodeNames.map(n=>`<div class="node ${(active===n?'running':(latest[n]||'pending'))}"><b>${n}</b><span class="status">${active===n?'running':(latest[n]||'pending')}</span></div>`).join('');
+    document.getElementById('events').innerHTML=(data.events||[]).slice(-40).reverse().map(e=>`<div class="event"><small>${e.time}</small> [${e.status}] ${e.node}
+${JSON.stringify(e.detail||{},null,2)}</div>`).join('');
+    document.getElementById('state').textContent=JSON.stringify({runtime_state:data.runtime_state,memory:data.memory,records_count:(data.records||[]).length},null,2);
+  }catch(e){}
+}
+refresh();setInterval(refresh,1000);
+</script>
+</body>
+</html>

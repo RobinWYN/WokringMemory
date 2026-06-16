@@ -1,0 +1,128 @@
+{
+  "total_cases": 11,
+  "success_cases": 11,
+  "failed_cases": 0,
+  "results": [
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "orchestra",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\global.png",
+      "input_state": "{\"longHorizon_command\": \"整理主卧\"}",
+      "output": "用户需求分析：当前视角为厨房区域，可见通往主卧的门（左侧黑框门），用户要求“整理主卧”，需先移动至主卧，再执行对应整理任务。  \n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "duration_sec": 6.773,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "decompose",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\local.png",
+      "input_state": "{\"current_intention\": \"整理主卧，先把床上的书放到左侧床头柜上\"}",
+      "output": "['导航至床边(导航)', '拿起床上的书(动作)', '导航至左侧床头柜旁(导航)', '将书放到左侧床头柜上(动作)']",
+      "duration_sec": 4.16,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\0_initial.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": null, \"current_task\": \"导航至床边(导航)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前任务为“导航至床边”，图像中床可见，但机器人底座与床边距离明显大于0.5米，未紧靠。  \n最终状态：[doing]",
+      "duration_sec": 4.533,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "navi",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\0_initial.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": null, \"current_task\": \"导航至床边(导航)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "<navi>  (self)  [[520,680], [620,680], [630,780], [510,780]] [[700,380], [999,380], [999,999], [700,999]]",
+      "duration_sec": 7.169,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\0_initial_bbox_navi.png",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\1_arrivalBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": null, \"current_task\": \"导航至床边(导航)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前任务为“导航至床边”，图像显示机器人已位于床边，底座紧贴床沿（距离＜0.5米）。  \n最终状态：[done]",
+      "duration_sec": 4.367,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\1_arrivalBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前任务为“拿起床上的书”，属抓取类任务；图像中书仍在床上，夹爪未接触或闭合抓取。  \n最终状态：[doing]",
+      "duration_sec": 4.026,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_decision",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\1_arrivalBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": null, \"gripper_right\": 100.0, \"gripper_left\": 100.0}",
+      "output": "<left><grasp>  (书)  [410, 750, 490, 920]",
+      "duration_sec": 5.134,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\1_arrivalBook_bbox.png",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\2_graspBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 50.0, \"gripper_left\": 100.0}",
+      "output": "分析：任务为“拿起床上的书”，夹爪正接触书本但未闭合抓稳，书仍在床上未离面。  \n最终状态：[doing]",
+      "duration_sec": 4.0,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_decision",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\2_graspBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 50.0, \"gripper_left\": 100.0}",
+      "output": "<right><grasp>  (书)  [470, 350, 560, 540]",
+      "duration_sec": 5.831,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\2_graspBook_bbox.png",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_state_checker",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\3_arrivalBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 50.0, \"gripper_left\": 100.0}",
+      "output": "分析：当前任务为“拿起床上的书”，但图像中书位于床头柜上，且机械臂正伸向该书，尚未接触或抓取。  \n最终状态：[doing]",
+      "duration_sec": 4.544,
+      "bbox_path": "",
+      "status": "success",
+      "error": ""
+    },
+    {
+      "case_name": "bedroom_placeBook",
+      "agent_type": "action_decision",
+      "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\3_arrivalBook.png",
+      "input_state": "{\"subtask_list\": [\"导航至床边(导航)\", \"拿起床上的书(动作)\", \"导航至左侧床头柜旁(导航)\", \"将书放到左侧床头柜上(动作)\"], \"last_task\": \"导航至床边(导航)\", \"current_task\": \"拿起床上的书(动作)\", \"last_action\": \"grasp\", \"gripper_right\": 50.0, \"gripper_left\": 100.0}",
+      "output": "<right><grasp>  (书)  [470, 410, 560, 590]",
+      "duration_sec": 3.728,
+      "bbox_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\3_arrivalBook_bbox.png",
+      "status": "success",
+      "error": ""
+    }
+  ]
+}

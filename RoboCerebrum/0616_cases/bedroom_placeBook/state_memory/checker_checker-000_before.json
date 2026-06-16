@@ -1,0 +1,224 @@
+{
+  "node_name": "checker",
+  "node_id": "checker-000",
+  "stage": "before",
+  "next_node": null,
+  "error": "",
+  "time": "2026-06-16 19:27:56",
+  "graph_state": {
+    "version_dir": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616",
+    "case_dir": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook",
+    "case_name": "bedroom_placeBook",
+    "runtime_state": {
+      "user_command": "整理主卧",
+      "longHorizon_command": "整理主卧",
+      "subtask_list": [
+        "导航至床边(导航)",
+        "拿起床上的书(动作)",
+        "导航至左侧床头柜旁(导航)",
+        "将书放到左侧床头柜上(动作)"
+      ],
+      "subtask_status": {
+        "导航至床边(导航)": "未完成",
+        "拿起床上的书(动作)": "未完成",
+        "导航至左侧床头柜旁(导航)": "未完成",
+        "将书放到左侧床头柜上(动作)": "未完成"
+      },
+      "action_results": [],
+      "nav_results": [],
+      "last_task": null,
+      "current_task": "导航至床边(导航)",
+      "last_action": null,
+      "gripper_right": null,
+      "gripper_left": null,
+      "time": null,
+      "orchestra_thinking": "用户需求分析：当前视角为厨房区域，可见通往主卧的门（左侧黑框门），用户要求“整理主卧”，需先移动至主卧，再执行对应整理任务。  \n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+      "orchestra_lists": [
+        {
+          "index": 1,
+          "name": "移动至主卧",
+          "type": "导航",
+          "agent_type": "navi",
+          "status": "未完成"
+        },
+        {
+          "index": 2,
+          "name": "整理主卧",
+          "type": "动作",
+          "agent_type": "action_decision",
+          "status": "未完成"
+        }
+      ],
+      "current_intention": "整理主卧，先把床上的书放到左侧床头柜上",
+      "last_intention": null,
+      "checker_results": [],
+      "conversation_memory": {
+        "memory_namespace": [
+          "conversation",
+          "w10_0616",
+          "bedroom_placeBook"
+        ],
+        "conversation_memories": {
+          "case_session": {
+            "case_name": "bedroom_placeBook",
+            "version_name": "w10_0616",
+            "user_command": "整理主卧",
+            "created_at": "2026-06-16 19:27:45",
+            "updated_at": "2026-06-16 19:27:45"
+          },
+          "runtime_state": {
+            "node_name": "decompose",
+            "user_command": "整理主卧",
+            "longHorizon_command": "整理主卧",
+            "current_intention": "整理主卧，先把床上的书放到左侧床头柜上",
+            "last_intention": null,
+            "subtask_list": [
+              "导航至床边(导航)",
+              "拿起床上的书(动作)",
+              "导航至左侧床头柜旁(导航)",
+              "将书放到左侧床头柜上(动作)"
+            ],
+            "subtask_status": {
+              "导航至床边(导航)": "未完成",
+              "拿起床上的书(动作)": "未完成",
+              "导航至左侧床头柜旁(导航)": "未完成",
+              "将书放到左侧床头柜上(动作)": "未完成"
+            },
+            "last_task": null,
+            "current_task": "导航至床边(导航)",
+            "action_results": [],
+            "nav_results": [],
+            "checker_results": [],
+            "last_output_preview": "['导航至床边(导航)', '拿起床上的书(动作)', '导航至左侧床头柜旁(导航)', '将书放到左侧床头柜上(动作)']",
+            "created_at": "2026-06-16 19:27:51",
+            "updated_at": "2026-06-16 19:27:56"
+          }
+        },
+        "memory_count": 2
+      },
+      "last_agent_timing": {
+        "orchestra": {
+          "end_to_end_sec": 6.773,
+          "api_elapsed_sec": 6.759,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        },
+        "decompose": {
+          "end_to_end_sec": 4.16,
+          "api_elapsed_sec": 4.143,
+          "model_inference_sec": null,
+          "model": "qwen3-vl-plus"
+        }
+      }
+    },
+    "records": [
+      {
+        "case_name": "bedroom_placeBook",
+        "agent_type": "orchestra",
+        "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\global.png",
+        "input_state": "{\"longHorizon_command\": \"整理主卧\"}",
+        "output": "用户需求分析：当前视角为厨房区域，可见通往主卧的门（左侧黑框门），用户要求“整理主卧”，需先移动至主卧，再执行对应整理任务。  \n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']",
+        "duration_sec": 6.773,
+        "bbox_path": "",
+        "status": "success",
+        "error": ""
+      },
+      {
+        "case_name": "bedroom_placeBook",
+        "agent_type": "decompose",
+        "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\local.png",
+        "input_state": "{\"current_intention\": \"整理主卧，先把床上的书放到左侧床头柜上\"}",
+        "output": "['导航至床边(导航)', '拿起床上的书(动作)', '导航至左侧床头柜旁(导航)', '将书放到左侧床头柜上(动作)']",
+        "duration_sec": 4.16,
+        "bbox_path": "",
+        "status": "success",
+        "error": ""
+      }
+    ],
+    "timestep_images": [
+      [
+        0,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\0_initial.png"
+      ],
+      [
+        1,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\1_arrivalBook.png"
+      ],
+      [
+        2,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\2_graspBook.png"
+      ],
+      [
+        3,
+        "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\3_arrivalBook.png"
+      ]
+    ],
+    "action_index": 0,
+    "last_decompose_state": "subtasks_ready",
+    "last_checker_state": null,
+    "last_error": "",
+    "active_node": "decompose",
+    "graph_events": [
+      {
+        "time": "2026-06-16 19:27:45",
+        "node": "orchestra",
+        "status": "running",
+        "detail": {
+          "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\global.png",
+          "input_state": "{\"longHorizon_command\": \"整理主卧\"}"
+        }
+      },
+      {
+        "time": "2026-06-16 19:27:51",
+        "node": "orchestra",
+        "status": "success",
+        "detail": {
+          "duration_sec": 6.773,
+          "output_preview": "用户需求分析：当前视角为厨房区域，可见通往主卧的门（左侧黑框门），用户要求“整理主卧”，需先移动至主卧，再执行对应整理任务。  \n子任务拆解：['移动至主卧(本体移动)', '整理主卧(局部任务)']"
+        }
+      },
+      {
+        "time": "2026-06-16 19:27:51",
+        "node": "select_intention",
+        "status": "running",
+        "detail": {}
+      },
+      {
+        "time": "2026-06-16 19:27:51",
+        "node": "select_intention",
+        "status": "success",
+        "detail": {
+          "current_intention": "整理主卧，先把床上的书放到左侧床头柜上"
+        }
+      },
+      {
+        "time": "2026-06-16 19:27:52",
+        "node": "decompose",
+        "status": "running",
+        "detail": {
+          "image_path": "D:\\w00955682\\RoboCerebrum\\LangGraph_threeLevel_reconstruct\\Brain\\data\\w10_0616\\bedroom_placeBook\\local.png",
+          "input_state": "{\"current_intention\": \"整理主卧，先把床上的书放到左侧床头柜上\"}"
+        }
+      },
+      {
+        "time": "2026-06-16 19:27:56",
+        "node": "decompose",
+        "status": "success",
+        "detail": {
+          "duration_sec": 4.16,
+          "output_preview": "['导航至床边(导航)', '拿起床上的书(动作)', '导航至左侧床头柜旁(导航)', '将书放到左侧床头柜上(动作)']"
+        }
+      }
+    ],
+    "memory_namespace": [
+      "conversation",
+      "w10_0616",
+      "bedroom_placeBook"
+    ],
+    "ros_input_mode": false,
+    "ros_image_topic": "/camera/camera/color/image_raw/compressed",
+    "ros_command_topic": "/longHorizon_command",
+    "ros_input_timeout_sec": 5.0,
+    "loop23_mode": false
+  }
+}
